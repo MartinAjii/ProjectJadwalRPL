@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 28, 2025 at 06:44 AM
+-- Generation Time: Jul 02, 2025 at 12:57 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -85,7 +85,10 @@ CREATE TABLE `guru` (
 INSERT INTO `guru` (`id_guru`, `nama`, `email`, `username`, `password`, `nip`, `foto`, `id_role`) VALUES
 (1, 'Faisal', 'gdmn97@gmail.com', 'Gdmn', 'gdmn97', '123230097', 0x313734393930333137342e6a7067, 3),
 (2, 'Fuuuu', 'futampanari@gmail.com', 'Fuuuu', 'fuuuu123', '123230108', '', 3),
-(3, 'Eja', 'ejahazel@gmail.com', 'Ejaa', 'usermage123', '123230096', '', 3);
+(3, 'Eja', 'ejahazell@gmail.com', 'Ejaa', 'usermage123', '123230096', '', 3),
+(4, 'Michael', 'michaelschumacher@gmail.com', 'michael', 'mikegoat123', '123230007', NULL, 3),
+(5, 'testguru', 'testguru@gmail.com', 'testguru', 'testguru123', '123230111', NULL, 3),
+(6, 'Mitchel', 'mithcelmouton@gmail.com', 'mitchel', 'mitchel123', '123230066', NULL, 3);
 
 -- --------------------------------------------------------
 
@@ -137,33 +140,33 @@ INSERT INTO `jadwal` (`id_jadwal`, `nama_jadwal`, `hari`, `jam_mulai`, `jam_sele
 (1, 'Pembenihan XI 1', 'Kamis', '07:30:00', '08:40:00', 'Pending', 'pembenihan.png', 1, 3, 1, 1, 4),
 (2, 'Pembenihan XI 2', 'Kamis', '08:40:00', '09:50:00', 'Pending', 'pembenihan.png', 1, 3, 1, 1, 5),
 (3, 'Pembenihan XI 3', 'Kamis', '10:05:00', '11:15:00', 'Pending', 'pembenihan.png', 1, 3, 1, 1, 6),
-(4, 'Pendederan XI 1', 'Rabu', '07:30:00', '08:40:00', 'Pending', 'pendederan.png', 2, NULL, 1, 2, 4),
-(5, 'Pendederan XI 2', 'Rabu', '08:40:00', '09:50:00', 'Pending', 'pendederan.png', 2, NULL, 1, 2, 5),
-(6, 'Pendederan XI 3', 'Rabu', '10:05:00', '11:15:00', 'Pending', 'pendederan.png', 2, NULL, 1, 2, 6),
+(4, 'Pendederan XI 1', 'Rabu', '07:30:00', '08:40:00', 'Pending', 'pendederan.png', 2, 1, 1, 2, 4),
+(5, 'Pendederan XI 2', 'Rabu', '08:40:00', '09:50:00', 'Pending', 'pendederan.png', 2, 1, 1, 2, 5),
+(6, 'Pendederan XI 3', 'Rabu', '10:05:00', '11:15:00', 'Pending', 'pendederan.png', 2, 1, 1, 2, 6),
 (7, 'Pembesaran XI 1', 'Senin', '07:30:00', '08:40:00', 'Pending', 'pembesaran.png', 6, 3, 1, 3, 4),
 (8, 'Pembesaran XI 2', 'Senin', '08:40:00', '09:50:00', 'Pending', 'pembesaran.png', 6, 3, 1, 3, 5),
 (9, 'Pembesaran XI 3', 'Senin', '10:05:00', '11:15:00', 'Pending', 'pembesaran.png', 6, 3, 1, 3, 6),
-(10, 'Pemanenan XII 1', 'Jumat', '07:30:00', '08:40:00', 'Pending', 'pemanenan.png', 7, NULL, 1, 4, 7),
-(11, 'Pemanenan XII 2', 'Jumat', '08:40:00', '09:50:00', 'Pending', 'pemanenan.png', 7, NULL, 1, 4, 8),
-(12, 'Pemanenan XII 3', 'Jumat', '10:05:00', '11:15:00', 'Pending', 'pemanenan.png', 7, NULL, 1, 4, 9),
-(13, 'Pakan Buatan X 1', 'Senin', '07:30:00', '08:40:00', 'Pending', 'pakanBuatan.png', 3, NULL, 1, 5, 1),
-(14, 'Pakan Buatan X 2', 'Senin', '08:40:00', '09:50:00', 'Pending', 'pakanBuatan.png', 3, NULL, 1, 5, 2),
-(15, 'Pakan Buatan X 3', 'Senin', '10:05:00', '11:15:00', 'Pending', 'pakanBuatan.png', 3, NULL, 1, 5, 3),
-(16, 'Pakan Buatan XI 1', 'Kamis', '07:30:00', '08:40:00', 'Pending', 'pakanBuatan.png', 4, NULL, 1, 6, 4),
-(17, 'Pakan Buatan XI 2', 'Kamis', '08:40:00', '09:50:00', 'Pending', 'pakanBuatan.png', 4, NULL, 1, 6, 5),
-(18, 'Pakan Buatan XI 3', 'Kamis', '10:05:00', '11:15:00', 'Pending', 'pakanBuatan.png', 4, NULL, 1, 6, 6),
-(19, 'Pakan Alami XI 1', 'Rabu', '07:30:00', '08:40:00', 'Pending', 'pakanAlami.png', 5, NULL, 1, 7, 4),
-(20, 'Pakan Alami XI 2', 'Rabu', '08:40:00', '09:50:00', 'Pending', 'pakanAlami.png', 5, NULL, 1, 7, 5),
-(21, 'Pakan Alami XI 3', 'Rabu', '10:05:00', '11:15:00', 'Pending', 'pakanAlami.png', 5, NULL, 1, 7, 6),
-(22, 'Pengendalian Hama dan Penyakit XI 1', 'Selasa', '07:30:00', '08:40:00', 'Pending', 'penangananHama.png', 8, NULL, 1, 8, 4),
-(23, 'Pengendalian Hama dan Penyakit XI 2', 'Selasa', '08:40:00', '09:50:00', 'Pending', 'penangananHama.png', 8, NULL, 1, 8, 5),
-(24, 'Pengendalian Hama dan Penyakit XI 3', 'Selasa', '10:05:00', '11:15:00', 'Pending', 'penangananHama.png', 8, NULL, 1, 8, 6),
-(25, 'Kualitas Air X 1', 'Selasa', '07:30:00', '08:40:00', 'Pending', 'kualitasAir.png', 9, NULL, 1, 9, 1),
-(26, 'Kualitas Air X 2', 'Selasa', '08:40:00', '09:50:00', 'Pending', 'kualitasAir.png', 9, NULL, 1, 9, 2),
-(27, 'Kualitas Air X 3', 'Selasa', '10:05:00', '11:15:00', 'Pending', 'kualitasAir.png', 9, NULL, 1, 9, 3),
-(28, 'Kualitas Air XI 1', 'Jumat', '07:30:00', '08:40:00', 'Pending', 'kualitasAir.png', 10, NULL, 1, 10, 4),
-(29, 'Kualitas Air XI 2', 'Jumat', '08:40:00', '09:50:00', 'Pending', 'kualitasAir.png', 10, NULL, 1, 10, 5),
-(30, 'Kualitas Air XI 3', 'Jumat', '10:05:00', '11:15:00', 'Pending', 'kualitasAir.png', 10, NULL, 1, 10, 6);
+(10, 'Pemanenan XII 1', 'Jumat', '07:30:00', '08:40:00', 'Pending', 'pemanenan.png', 7, 1, 1, 4, 7),
+(11, 'Pemanenan XII 2', 'Jumat', '08:40:00', '09:50:00', 'Pending', 'pemanenan.png', 7, 1, 1, 4, 8),
+(12, 'Pemanenan XII 3', 'Jumat', '10:05:00', '11:15:00', 'Pending', 'pemanenan.png', 7, 1, 1, 4, 9),
+(13, 'Pakan Buatan X 1', 'Senin', '07:30:00', '08:40:00', 'Pending', 'pakanBuatan.png', 3, 4, 1, 5, 1),
+(14, 'Pakan Buatan X 2', 'Senin', '08:40:00', '09:50:00', 'Pending', 'pakanBuatan.png', 3, 4, 1, 5, 2),
+(15, 'Pakan Buatan X 3', 'Senin', '10:05:00', '11:15:00', 'Pending', 'pakanBuatan.png', 3, 4, 1, 5, 3),
+(16, 'Pakan Buatan XI 3', 'Kamis', '07:30:00', '08:40:00', 'Pending', 'pakanBuatan.png', 4, 6, 1, 6, 6),
+(17, 'Pakan Buatan XI 1', 'Kamis', '08:40:00', '09:50:00', 'Pending', 'pakanBuatan.png', 4, 6, 1, 6, 4),
+(18, 'Pakan Buatan XI 2', 'Kamis', '10:05:00', '11:15:00', 'Pending', 'pakanBuatan.png', 4, 6, 1, 6, 5),
+(19, 'Pakan Alami XI 3', 'Rabu', '07:30:00', '08:40:00', 'Pending', 'pakanAlami.png', 5, 5, 1, 7, 6),
+(20, 'Pakan Alami XI 1', 'Rabu', '08:40:00', '09:50:00', 'Pending', 'pakanAlami.png', 5, 5, 1, 7, 4),
+(21, 'Pakan Alami XI 2', 'Rabu', '10:05:00', '11:15:00', 'Pending', 'pakanAlami.png', 5, 5, 1, 7, 5),
+(22, 'Pengendalian Hama dan Penyakit XI 1', 'Selasa', '07:30:00', '08:40:00', 'Pending', 'penangananHama.png', 8, 6, 1, 8, 4),
+(23, 'Pengendalian Hama dan Penyakit XI 2', 'Selasa', '08:40:00', '09:50:00', NULL, 'penangananHama.png', 8, 6, 1, 8, 5),
+(24, 'Pengendalian Hama dan Penyakit XI 3', 'Selasa', '10:05:00', '11:15:00', 'Pending', 'penangananHama.png', 8, 6, 1, 8, 6),
+(25, 'Kualitas Air X 1', 'Selasa', '07:30:00', '08:40:00', 'Pending', 'kualitasAir.png', 9, 4, 1, 9, 1),
+(26, 'Kualitas Air X 2', 'Selasa', '08:40:00', '09:50:00', 'Pending', 'kualitasAir.png', 9, 3, 1, 9, 2),
+(27, 'Kualitas Air X 3', 'Selasa', '10:05:00', '11:15:00', 'Pending', 'kualitasAir.png', 9, 3, 1, 9, 3),
+(28, 'Kualitas Air XI 1', 'Jumat', '07:30:00', '08:40:00', 'Pending', 'kualitasAir.png', 10, 3, 1, 10, 4),
+(29, 'Kualitas Air XI 2', 'Jumat', '08:40:00', '09:50:00', 'Pending', 'kualitasAir.png', 10, 2, 1, 10, 5),
+(30, 'Kualitas Air XI 3', 'Jumat', '10:05:00', '11:15:00', 'Pending', 'kualitasAir.png', 10, 2, 1, 10, 6);
 
 -- --------------------------------------------------------
 
@@ -263,11 +266,19 @@ INSERT INTO `labolatorium` (`id_lab`, `nama_lab`, `status`, `gambar`) VALUES
 
 CREATE TABLE `laporan_praktikum` (
   `id_laporan` int(11) NOT NULL,
-  `hasil_praktikum` int(11) NOT NULL,
+  `hasil_praktikum` varchar(100) NOT NULL,
   `catatan` varchar(1000) NOT NULL,
+  `tanggal` date NOT NULL,
   `id_jadwal` int(11) NOT NULL,
   `id_siswa` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `laporan_praktikum`
+--
+
+INSERT INTO `laporan_praktikum` (`id_laporan`, `hasil_praktikum`, `catatan`, `tanggal`, `id_jadwal`, `id_siswa`) VALUES
+(2, '1751210404_Sifu.docx', 'Laporan ke-1', '2025-06-29', 7, 4);
 
 -- --------------------------------------------------------
 
@@ -338,7 +349,8 @@ CREATE TABLE `operator` (
 --
 
 INSERT INTO `operator` (`id_operator`, `nama`, `email`, `username`, `password`, `foto`, `id_role`) VALUES
-(1, 'Reyhan', 'reyrey@gmail.com', 'Mas Rey', 'admin123', 0x313735303035313238372e6a706567, 1);
+(1, 'Reyhan', 'reyrey@gmail.com', 'Mas Rey', 'admin123', 0x313735303035313238372e6a706567, 1),
+(2, 'testoperator', 'testoperator@gmail.com', 'testoperator', 'testoperator123', '', 1);
 
 -- --------------------------------------------------------
 
@@ -360,13 +372,14 @@ CREATE TABLE `password_reset_tokens` (
 
 CREATE TABLE `permintaan_jadwal` (
   `id_permintaan` int(11) NOT NULL,
+  `id_jadwal` int(11) NOT NULL,
   `id_guru` int(11) NOT NULL,
   `id_mapel` int(11) NOT NULL,
   `id_kelas` int(11) NOT NULL,
   `hari` enum('Senin','Selasa','Rabu','Kamis','Jumat') NOT NULL,
   `jam_mulai` time NOT NULL,
   `jam_selesai` time NOT NULL,
-  `status` enum('Pending','Diterima','Ditolak') DEFAULT 'Pending',
+  `status` enum('Pending','Diterima','Ditolak','Dibatalkan') DEFAULT 'Pending',
   `catatan` text DEFAULT NULL,
   `waktu_pengajuan` timestamp NOT NULL DEFAULT current_timestamp(),
   `gambar_jadwal` varchar(50) DEFAULT NULL
@@ -376,10 +389,12 @@ CREATE TABLE `permintaan_jadwal` (
 -- Dumping data for table `permintaan_jadwal`
 --
 
-INSERT INTO `permintaan_jadwal` (`id_permintaan`, `id_guru`, `id_mapel`, `id_kelas`, `hari`, `jam_mulai`, `jam_selesai`, `status`, `catatan`, `waktu_pengajuan`, `gambar_jadwal`) VALUES
-(11, 1, 2, 5, 'Rabu', '08:40:00', '09:50:00', 'Diterima', NULL, '2025-06-27 17:47:41', NULL),
-(12, 1, 4, 9, 'Jumat', '10:05:00', '11:15:00', 'Diterima', NULL, '2025-06-27 17:47:46', NULL),
-(13, 3, 1, 6, 'Kamis', '10:05:00', '11:15:00', 'Diterima', NULL, '2025-06-27 17:54:04', NULL);
+INSERT INTO `permintaan_jadwal` (`id_permintaan`, `id_jadwal`, `id_guru`, `id_mapel`, `id_kelas`, `hari`, `jam_mulai`, `jam_selesai`, `status`, `catatan`, `waktu_pengajuan`, `gambar_jadwal`) VALUES
+(30, 9, 3, 3, 6, 'Senin', '10:05:00', '11:15:00', 'Diterima', NULL, '2025-07-01 04:16:27', 'pembesaran.png'),
+(34, 11, 1, 4, 8, 'Jumat', '08:40:00', '09:50:00', 'Diterima', NULL, '2025-07-01 04:57:11', 'pemanenan.png'),
+(35, 10, 1, 4, 7, 'Jumat', '07:30:00', '08:40:00', 'Diterima', NULL, '2025-07-01 04:58:02', 'pemanenan.png'),
+(36, 26, 3, 9, 2, 'Selasa', '08:40:00', '09:50:00', 'Dibatalkan', NULL, '2025-07-02 05:31:41', NULL),
+(37, 26, 3, 9, 2, 'Selasa', '08:40:00', '09:50:00', 'Diterima', NULL, '2025-07-02 05:31:48', 'kualitasAir.png');
 
 -- --------------------------------------------------------
 
@@ -421,7 +436,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('stjy1dQs5rdiokd418NNyb0aYE7qweKleb7mQmFh', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'YTo4OntzOjk6Il9wcmV2aW91cyI7YToxOntzOjM6InVybCI7czozOToiaHR0cDovLzEyNy4wLjAuMTo4MDAwL2Rhc2hib2FyZG9wZXJhdG9yIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo2OiJfdG9rZW4iO3M6NDA6IkEzeDljaHpCTFdoYmhZMXZCUlIzTkJvcnA2UTZKbkhBUkJrSGg3aGQiO3M6NzoidXNlcl9pZCI7aToxO3M6ODoidXNlcm5hbWUiO3M6NzoiTWFzIFJleSI7czo0OiJyb2xlIjtzOjg6Im9wZXJhdG9yIjtzOjc6Imd1cnVfaWQiO2k6MztzOjExOiJvcGVyYXRvcl9pZCI7aToxO30=', 1751046937);
+('NTPb5rvtQVjETf1UqGBYPn2FjSp6qeFMIlClvw9t', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'YTozOntzOjk6Il9wcmV2aW91cyI7YToxOntzOjM6InVybCI7czoyNzoiaHR0cDovLzEyNy4wLjAuMTo4MDAwL2xvZ2luIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo2OiJfdG9rZW4iO3M6NDA6Ik1nUWdaMHF6UzF1bVFicVREZlBYb09iTkprM3RUMVk2SkZHc05NeXAiO30=', 1751434379);
 
 -- --------------------------------------------------------
 
@@ -448,7 +463,10 @@ CREATE TABLE `siswa` (
 --
 
 INSERT INTO `siswa` (`id_siswa`, `nama`, `email`, `kelas`, `jurusan`, `username`, `password`, `nis`, `foto`, `id_role`, `id_kelas`) VALUES
-(1, 'Martin', 'martinganteng@gmail.com', 'XII APAT 1', 'Perikanan', 'Martis', 'martin123', '123230092', 0x313734393930343935312e4a5047, 2, 7);
+(1, 'Martin', 'martinganteng@gmail.com', 'XII APAT 1', 'Perikanan', 'Martis', 'martin123', '123230092', 0x313734393930343935312e4a5047, 2, 7),
+(3, 'luthfi', 'luthfigmg@gmail.com', 'X APAT 1', 'Perikanan', 'luthfi', 'luthfi123', '123230085', '', 2, 1),
+(4, 'awwab', 'wabsjago@gmail.com', 'XI APAT 1', 'Perikanan', 'awwab', 'awwab123', '123230088', '', 2, 4),
+(5, 'testsiswa', 'testsiswa@gmail.com', 'X APAT 1', 'Perikanan', 'testsiswa', 'testsiswa123', '123230077', '', 2, 1);
 
 -- --------------------------------------------------------
 
@@ -545,8 +563,8 @@ ALTER TABLE `labolatorium`
 --
 ALTER TABLE `laporan_praktikum`
   ADD PRIMARY KEY (`id_laporan`),
-  ADD UNIQUE KEY `id_jadwal` (`id_jadwal`),
-  ADD UNIQUE KEY `id_siswa` (`id_siswa`);
+  ADD KEY `id_jadwal` (`id_jadwal`) USING BTREE,
+  ADD KEY `id_siswa` (`id_siswa`) USING BTREE;
 
 --
 -- Indexes for table `mapel`
@@ -565,7 +583,7 @@ ALTER TABLE `migrations`
 --
 ALTER TABLE `operator`
   ADD PRIMARY KEY (`id_operator`),
-  ADD UNIQUE KEY `id_role` (`id_role`);
+  ADD KEY `id_role` (`id_role`) USING BTREE;
 
 --
 -- Indexes for table `password_reset_tokens`
@@ -580,7 +598,8 @@ ALTER TABLE `permintaan_jadwal`
   ADD PRIMARY KEY (`id_permintaan`),
   ADD KEY `id_guru` (`id_guru`),
   ADD KEY `id_mapel` (`id_mapel`),
-  ADD KEY `id_kelas` (`id_kelas`);
+  ADD KEY `id_kelas` (`id_kelas`),
+  ADD KEY `id_jadwal` (`id_jadwal`);
 
 --
 -- Indexes for table `role`
@@ -601,8 +620,8 @@ ALTER TABLE `sessions`
 --
 ALTER TABLE `siswa`
   ADD PRIMARY KEY (`id_siswa`),
-  ADD UNIQUE KEY `id_role` (`id_role`),
-  ADD KEY `fk_siswa_kelas` (`id_kelas`);
+  ADD KEY `fk_siswa_kelas` (`id_kelas`),
+  ADD KEY `id_role` (`id_role`) USING BTREE;
 
 --
 -- Indexes for table `users`
@@ -640,6 +659,12 @@ ALTER TABLE `kelas`
   MODIFY `id_kelas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
+-- AUTO_INCREMENT for table `laporan_praktikum`
+--
+ALTER TABLE `laporan_praktikum`
+  MODIFY `id_laporan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `mapel`
 --
 ALTER TABLE `mapel`
@@ -655,7 +680,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `permintaan_jadwal`
 --
 ALTER TABLE `permintaan_jadwal`
-  MODIFY `id_permintaan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_permintaan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -709,7 +734,8 @@ ALTER TABLE `operator`
 ALTER TABLE `permintaan_jadwal`
   ADD CONSTRAINT `permintaan_jadwal_ibfk_1` FOREIGN KEY (`id_guru`) REFERENCES `guru` (`id_guru`),
   ADD CONSTRAINT `permintaan_jadwal_ibfk_2` FOREIGN KEY (`id_mapel`) REFERENCES `mapel` (`id_mapel`),
-  ADD CONSTRAINT `permintaan_jadwal_ibfk_3` FOREIGN KEY (`id_kelas`) REFERENCES `kelas` (`id_kelas`);
+  ADD CONSTRAINT `permintaan_jadwal_ibfk_3` FOREIGN KEY (`id_kelas`) REFERENCES `kelas` (`id_kelas`),
+  ADD CONSTRAINT `permintaan_jadwal_ibfk_4` FOREIGN KEY (`id_jadwal`) REFERENCES `jadwal` (`id_jadwal`);
 
 --
 -- Constraints for table `siswa`
