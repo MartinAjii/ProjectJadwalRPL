@@ -25,20 +25,14 @@ body{
     margin-bottom: 20px;
     align-self: center;
 }
-.navbar {
+.navbar{
     background-color: #AEEEEE;
     border: 3px solid #000000;
     border-radius: 20px;
     display: flex;
-    justify-content: space-around; /* ikon menyebar */
-    align-items: center;
-    padding: 10px 15px;
-
-    width: 90%;
-    max-width: 320px;
-    margin: 0 auto;
-    box-sizing: border-box;
-    flex-wrap: wrap;
+    
+    align-self: center;
+    margin-top: auto;
 }
 .logo{
     width:32px; 
